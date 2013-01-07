@@ -4,7 +4,7 @@ set :application, "hostin"
 set :scm, :git
 set :repository,  "git://github.com/mmcdaris/hostin.git"
 set :scm_passphrase, ""
-set :deploy_via, :rsync_with_remote_cache
+# set :deploy_via, :rsync_with_remote_cache
 # set :rsync_options, '-az --delete --exclude=.svn --delete-excluded'
 set :use_sudo, false
 set :user, "ubuntu"
@@ -14,7 +14,7 @@ ssh_options[:forward_agent] = true
 #set :rake, "/usr/local/bin/rake"
 set :deploy_via, :remote_cache
 
-set :bundle_cmd, 'source $HOME/.bash_profile && bundle'
+#set :bundle_cmd, 'source $HOME/.bash_profile && bundle'
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -50,3 +50,5 @@ role :db,  location,  :primary => true # This is where Rails migrations will run
 #
 # set :rvm_ruby_string, "1.9.3"
 
+default_environment['PATH'] = '/usr/local/lib/ruby/gems/1.9.1/bin:$PATH'
+default_environment['GEM_PATH']= '/usr/local/lib/ruby/gems/1.9.1'
