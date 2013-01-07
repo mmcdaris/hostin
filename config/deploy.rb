@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-set :application, "gaetesting"
+set :application, "hostin"
 set :scm, :git
 set :repository,  "git://github.com/mmcdaris/hostin.git"
 set :scm_passphrase, ""
