@@ -2,7 +2,7 @@ require 'bundler/capistrano'
 
 set :application, "gaetesting"
 set :scm, :git
-set :repository,  "git://github.com/mmcdaris/gaetesting.git"
+set :repository,  "git://github.com/mmcdaris/hostin.git"
 set :scm_passphrase, ""
 set :deploy_via, :rsync_with_remote_cache
 # set :rsync_options, '-az --delete --exclude=.svn --delete-excluded'
